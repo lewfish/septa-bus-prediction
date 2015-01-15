@@ -10,9 +10,13 @@ Install
 Install <a href="https://github.com/jarondl/pygtfs">pygtfs</a>. Change line 166 in pygtfs/gtfs_entities.py to be
 ```_validate_wheelchair = _validate_int_choice([None,0,1,2], 'wheelchair_boarding')``` to allow for null wheelchair_boarding fields. Then use the command-line gtfs2db tool to make a sqlite database with the contents of the Septa GTFS bus feed.
 
+Install <a href="https://github.com/lewfish/gis-tools">lewfish/gis-tools</a> and make sure it's on the PYTHONPATH.
+
 Then in this project, invoke ```pip install -r requirments.txt```
 
 In lewfish/septaprediction/septa.py change the value of septa_fn to point to the database file created with gtfs2db.
+
+
 
 Run
 ====
